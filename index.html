@@ -4,23 +4,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sara C Morell | Tavas World</title>
+  <title>Tavas World | Sara C Morell</title>
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .work-box img {
+      transition: transform 0.3s ease;
+      max-height: 300px;
+      object-fit: cover;
+      background: none;
+      box-shadow: none;
+    }
+    .work-box img:hover {
+      transform: scale(1.02);
+    }
+    .logo img {
+      max-height: 160px;
+      height: auto;
+      width: auto;
+    }
+    .about-mf img {
+      max-width: 180px !important;
+    }
+  </style>
 </head>
 
 <body>
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">Sara C Morell</a></h1>
+      <a href="index.html" class="logo"><img src="assets/img/Tavas World solo logo.png" alt="Tavas World Logo" class="img-fluid"></a>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+
           <li><a class="nav-link scrollto" href="#books">Books</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -29,13 +50,13 @@
     </div>
   </header>
 
-  <section id="hero" class="hero route bg-image" style="background-image: url(assets/img/pic9.jpg); background-size: cover; background-position: center;">
+  <section id="hero" class="hero route bg-image" style="background-image: url(assets/img/lake.jpg); background-size: cover; background-position: center;">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container text-center">
           <h1 class="hero-title mb-4">Welcome to Tavas World</h1>
-          <p class="hero-subtitle">By <span class="typed" data-typed-items="Sara C Morell, Author, Creator, Storyteller"></span></p>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Author, Creative Strategist, Visionary"></span></p>
         </div>
       </div>
     </div>
@@ -45,25 +66,16 @@
     <section id="about" class="about-mf sect-pt4 route">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="about-img">
-                    <img src="assets/img/20240622_072529.jpg" class="img-fluid rounded b-shadow-a" alt="Sara C Morell">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h5 class="title-left">About Sara</h5>
-                  <p class="lead">Sara C Morell is an author, creative director, and visionary behind Tavas World. Her work spans children's literature, coloring books, and thoughtful journals that aim to inspire, educate, and entertain. With a background in program management and publishing, Sara blends imagination with structure to build a brand that resonates across ages.</p>
-                  <ul class="list-ico mt-3">
-                    <li><span class="bi bi-geo-alt"></span> Based in the U.S., Open to Relocation</li>
-                    <li><span class="bi bi-link"></span> <a href="https://www.amazon.com/author/saracmorell" target="_blank">Amazon Author Page</a></li>
-                    <li><span class="bi bi-envelope"></span> contact@example.com</li>
-                  </ul>
-                </div>
-              </div>
+          <div class="col-sm-12 text-center">
+            <div class="title-box">
+              <h3 class="title-a">About Me</h3>
             </div>
+            <img src="assets/img/20240622_072529.jpg" alt="Sara C Morell" class="img-fluid rounded-circle mb-3">
+            <p>Sara C. Morell, born on July 19, 1975, to a dynamic young mother and a military father with a passion for music and photography, grew up surrounded by creativity and resilience. Her mother’s journey from a certified nursing assistant to owning a nursing home instilled in Sara the values of hard work, ambition, and compassion.</p>
+            <p>Navigating the challenges of frequent moves during childhood, Sara and her brother developed a deep sense of adaptability and determination. These formative experiences are the heartbeat of The Adventures of Raspen and Sylas, a beloved children’s book series that blends life lessons with enchanting stories to foster meaningful conversations between parents and children.</p>
+            <p>Sara’s life has been a tapestry of experiences—from raising three boys on a vibrant farm filled with llamas, a yak, and Barbados sheep, to navigating life’s changes with resilience and grace. Though her sons are grown and her path has evolved, she continues to pour her experiences into creating books and journals that uplift and inspire.</p>
+            <p>Armed with a degree in Information Technology and on her way to completing a bachelor’s in Business Management, Sara has excelled in roles within Maternal Fetal Medicine and state government. She brings a blend of leadership, compassion, and innovation to every endeavor.</p>
+            <p>Today, Sara lives with intention and curiosity—embracing new adventures, whether she’s kayaking tranquil waters or uncovering hidden beauty in nature. Every story she writes carries that same spirit of exploration and heart, offering readers not just tales, but touchstones of hope and growth.</p>
           </div>
         </div>
       </div>
@@ -72,57 +84,87 @@
     <section id="books" class="portfolio-mf sect-pt4 route">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
+          <div class="col-sm-12 text-center">
+            <div class="title-box">
               <h3 class="title-a">Books</h3>
-              <p class="subtitle-a">Featured Publications by Sara C Morell</p>
-              <div class="line-mf"></div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/cover1.jpg" alt="Raspen and Sylas" class="img-fluid">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="work-box">
+                  <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank">
+                    <img src="assets/img/raspen.png" alt="Raspen and Sylas" class="img-fluid">
+                  </a>
                 </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">The Adventures of Raspen and Sylas</h2>
               </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/CoverPNG.png" alt="Dinosaur Coloring Book" class="img-fluid">
+              <div class="col-md-4">
+                <div class="work-box">
+                  <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank">
+                    <img src="assets/img/dino-activity.png" alt="Dino Activity" class="img-fluid">
+                  </a>
                 </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">My Big Dinosaur Coloring Book</h2>
               </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/Front.png" alt="Summer Coloring Book" class="img-fluid">
+              <div class="col-md-4">
+                <div class="work-box">
+                  <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank">
+                    <img src="assets/img/dinosaur-action.png" alt="Dinosaur Action" class="img-fluid">
+                  </a>
                 </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">Summer Coloring Book</h2>
+              </div>
+              <div class="col-md-4">
+                <div class="work-box">
+                  <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank">
+                    <img src="assets/img/machines.png" alt="Machines" class="img-fluid">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="work-box">
+                  <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank">
+                    <img src="assets/img/shineon.png" alt="Shine On" class="img-fluid">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="work-box">
+                  <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank">
+                    <img src="assets/img/summer.png" alt="Summer Book" class="img-fluid">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="contact" class="contact-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="title-box">
+              <h3 class="title-a">Contact</h3>
+            </div>
+            <form action="https://formsubmit.co/tavasworldllc@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="name" placeholder="Your Name" class="form-control mb-2" required>
+              <input type="email" name="email" placeholder="Your Email" class="form-control mb-2" required>
+              <textarea name="message" rows="5" placeholder="Message" class="form-control mb-2" required></textarea>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
+</html>
 
 </html>
