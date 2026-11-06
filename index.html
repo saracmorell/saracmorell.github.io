@@ -1,14 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://www.tavasworld.com/">
-<link rel="canonical" href="https://www.tavasworld.com/">
-<title>Tavas World</title>
-<script>location.replace("https://www.tavasworld.com/");</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sara C. Morell, Operations & Digital Project Manager. Portfolio of program, operations, and digital delivery work.">
+<title>Sara C. Morell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one left-aligned reading column; work shown as project briefs (context / what I did / result), grouped by track */
+:root{
+  --bg:#F4F6F4; --surface:#FFFFFF; --fg:#16262B; --muted:#55666A; --line:#D5DDDA;
+  --accent:#0E6461; --accent-soft:#E1EFEC; --mark:#8A5A12; --mark-soft:#F6ECDA;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1719; --surface:#152124; --fg:#E3ECEA; --muted:#9AAEAD; --line:#27393C;
+  --accent:#5CC4B9; --accent-soft:#17312F; --mark:#E2B263; --mark-soft:#2E2617; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1719; --surface:#152124; --fg:#E3ECEA; --muted:#9AAEAD; --line:#27393C;
+  --accent:#5CC4B9; --accent-soft:#17312F; --mark:#E2B263; --mark-soft:#2E2617; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:780px;margin:0 auto;padding-block:56px 72px;display:grid;gap:64px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+.label{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* Header */
+header{display:grid;gap:20px}
+header h1{font-size:clamp(40px,7vw,60px);letter-spacing:-.01em}
+.role{font:600 clamp(18px,2.6vw,22px)/1.35 var(--body);color:var(--accent)}
+.lede{font-size:18px;max-width:62ch;color:var(--fg)}
+.contact{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;font-size:15px}
+.contact .email{font-family:var(--mono);font-size:14px;user-select:all}
+.copy{font:500 13px var(--body);background:transparent;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer}
+.copy:hover{background:var(--accent-soft)}
+
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{padding:16px 16px 16px 0;display:grid;gap:4px;min-width:0}
+.facts div+div{padding-left:16px;border-left:1px solid var(--line)}
+.facts strong{font:400 22px/1.2 var(--display)}
+.facts span{font-size:13px;color:var(--muted)}
+
+/* Sections */
+section{display:grid;gap:28px}
+.sec-head{display:grid;gap:8px}
+.sec-head h2{font-size:clamp(26px,4vw,32px)}
+.sec-head p{color:var(--muted);max-width:62ch}
+
+.brief{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:16px;min-width:0}
+.brief-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline}
+.brief h3{font-size:22px}
+.meta{font:400 13px/1.4 var(--mono);color:var(--muted)}
+.result{font:600 17px/1.45 var(--body);color:var(--fg);border-left:3px solid var(--accent);padding-left:14px}
+.rows{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px 20px;margin:0}
+.rows dt{font:500 12px/1.9 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rows dd{margin:0}
+.rows ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 12px/1 var(--mono);padding:6px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.chip.status{background:var(--mark-soft);color:var(--mark)}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;font-weight:600}
+
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid2 .brief{gap:12px}
+.grid2 .brief h3{font-size:20px}
+.grid2 p{font-size:15px}
+
+.note{font-size:15px;color:var(--muted);max-width:62ch;background:var(--accent-soft);border-radius:8px;padding:14px 16px}
+.note strong{color:var(--fg)}
+
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px}
+.skills div{display:grid;gap:6px;min-width:0}
+.skills p{font-size:15px}
+.creds{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.creds li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:10px;flex-wrap:wrap}
+.creds span{color:var(--muted);font-size:14px}
+
+footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--muted);font-size:14px}
+
+@media (max-width:640px){
+  .wrap{padding-block:36px 56px;gap:48px}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+  .rows{grid-template-columns:1fr;gap:4px}
+  .rows dd{margin-bottom:10px}
+  .grid2,.skills{grid-template-columns:1fr}
+  .brief{padding:20px}
+}
+@media (prefers-reduced-motion:no-preference){.copy{transition:background .15s}}
+</style>
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}</style>
 </head>
-<body style="background:#1C1208;color:#F5ECD7;font-family:Georgia,serif;text-align:center;padding:80px 20px">
-<p>Tavas World has moved. <a href="https://www.tavasworld.com/" style="color:#D4A853">Continue to tavasworld.com</a></p>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="label">Portfolio</p>
+    <h1>Sara C. Morell</h1>
+    <p class="role">Operations &amp; Digital Project Manager</p>
+    <p class="lede">I run programs, business offices, and digital projects across government, healthcare, and nonprofit organizations. I take work from messy to organized, keep stakeholders aligned, and get things launched.</p>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/sara-c-morell-94895391" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="email" id="email">saracmorell@gmail.com</span>
+      <button class="copy" id="copyEmail" type="button">Copy email</button>
+      <span class="label" style="letter-spacing:.04em">Open to remote roles · U.S.</span>
+    </div>
+    <div class="facts" aria-label="At a glance">
+      <div><strong>10+ years</strong><span>Operations and programs</span></div>
+      <div><strong>3 sectors</strong><span>Government, healthcare, nonprofit</span></div>
+      <div><strong>~40%</strong><span>OKABLE participation growth</span></div>
+      <div><strong>4 live projects</strong><span>Websites and apps shipped</span></div>
+    </div>
+  </header>
+
+  <section aria-labelledby="ops">
+    <div class="sec-head">
+      <p class="label">Track 1</p>
+      <h2 id="ops">Operations &amp; programs</h2>
+      <p>Statewide programs, regulated healthcare operations, and the people and systems behind them.</p>
+    </div>
+
+    <article class="brief">
+      <div class="brief-top">
+        <h3>Growing a statewide savings program with no marketing budget</h3>
+        <span class="meta">Oklahoma State Treasurer · 2024–2025</span>
+      </div>
+      <p class="result">Increased OKABLE program participation by about 40%.</p>
+      <dl class="rows">
+        <dt>Context</dt><dd>Managed Oklahoma's OK529, OKABLE, SEEDOK, and 1365 account programs under state and regulatory requirements, with no dedicated marketing budget.</dd>
+        <dt>What I did</dt><dd><ul>
+          <li>Built outreach through stakeholder engagement instead of paid advertising.</li>
+          <li>Removed friction in program processes and coordinated financial partners, vendors, and internal teams to resolve delivery issues.</li>
+          <li>Tracked participation and performance and prepared reports for leadership.</li>
+        </ul></dd>
+      </dl>
+      <div class="chips"><span class="chip">Program management</span><span class="chip">Stakeholder engagement</span><span class="chip">Compliance</span><span class="chip">Reporting</span></div>
+    </article>
+
+    <article class="brief">
+      <div class="brief-top">
+        <h3>Statewide emergency preparedness exercise with USDA</h3>
+        <span class="meta">Montana Dept. of Livestock · 2017–2019</span>
+      </div>
+      <p class="result">Coordinated simulation exercises engaging 500+ veterinarians and industry partners statewide.</p>
+      <dl class="rows">
+        <dt>Context</dt><dd>Directed daily operations of the Animal Import and Export Office and served as administrative lead for four State Veterinarians.</dd>
+        <dt>What I did</dt><dd><ul>
+          <li>Supervised five Program Managers: training, performance management, and oversight.</li>
+          <li>Coordinated emergency preparedness exercises with USDA and state agencies.</li>
+          <li>Led software adoption planning based on multistate research, with staff training and three-month milestones.</li>
+          <li>Managed hiring, onboarding, payroll coordination, and benefits; served on the Labor Management Committee.</li>
+        </ul></dd>
+      </dl>
+      <div class="chips"><span class="chip">Team leadership</span><span class="chip">Cross-agency coordination</span><span class="chip">Change management</span></div>
+    </article>
+
+    <article class="brief">
+      <div class="brief-top">
+        <h3>Running a skilled nursing facility's business office</h3>
+        <span class="meta">Mountain View Care Center · 2019–2022</span>
+      </div>
+      <p class="result">Office Manager and designated Backup Administrator, leading the facility in the Administrator's absence.</p>
+      <dl class="rows">
+        <dt>Context</dt><dd>A long-term care and skilled nursing facility in a heavily regulated, multi-payer environment.</dd>
+        <dt>What I did</dt><dd><ul>
+          <li>Managed accounts payable and receivable, payroll, timesheet audits, and billing for Medicaid, Social Security, private insurance, and resident accounts.</li>
+          <li>Ran onboarding, benefits administration, and personnel records.</li>
+          <li>Supported state survey readiness and QAPI with nursing and executive leadership.</li>
+          <li>Provided day-to-day technology support for facility staff.</li>
+        </ul></dd>
+      </dl>
+      <div class="chips"><span class="chip">AP / AR</span><span class="chip">Payroll</span><span class="chip">Medicaid billing</span><span class="chip">HR</span></div>
+    </article>
+
+    <article class="brief">
+      <div class="brief-top">
+        <h3>Clinical software super user for Maternal-Fetal Medicine</h3>
+        <span class="meta">Community Medical Center · 2008–2014</span>
+      </div>
+      <p class="result">Bridged clinicians and IT: turned department needs into screen and workflow requirements, and tested software before launch.</p>
+      <dl class="rows">
+        <dt>What I did</dt><dd><ul>
+          <li>Translated departmental needs into application-screen and workflow requirements for IT.</li>
+          <li>Tested software before go-live, identified defects, and reported needed fixes.</li>
+          <li>Performed CPT and ICD coding, patient access, and clinical documentation; coordinated staff onboarding.</li>
+        </ul></dd>
+      </dl>
+      <div class="chips"><span class="chip">Requirements</span><span class="chip">User acceptance testing</span><span class="chip">EHR</span><span class="chip">CPT / ICD</span></div>
+    </article>
+  </section>
+
+  <section aria-labelledby="digital">
+    <div class="sec-head">
+      <p class="label">Track 2</p>
+      <h2 id="digital">Digital delivery</h2>
+      <p>Websites and products I scoped, built, launched, and maintain.</p>
+    </div>
+    <p class="note"><strong>How I build:</strong> I define requirements, design the experience, test on real devices, and ship using AI-assisted development tools, with GitHub as the source of truth.</p>
+
+    <div class="grid2">
+      <article class="brief">
+        <div class="brief-top"><h3>Shota, official artist site</h3></div>
+        <div class="chips"><span class="chip status">Live</span><span class="chip">Client project</span></div>
+        <p>Designed and developed an editorial website for a recording artist, from brand direction through launch. I continue to manage the site.</p>
+        <div class="links"><a href="https://www.shotamusic.com" target="_blank" rel="noopener">shotamusic.com</a></div>
+      </article>
+
+      <article class="brief">
+        <div class="brief-top"><h3>Salomon Farms &amp; Trucking</h3></div>
+        <div class="chips"><span class="chip status">Live</span><span class="chip">Client project</span></div>
+        <p>Built and maintain the business website for a family farming and trucking company.</p>
+        <div class="links"><a href="https://sftrucking406.com" target="_blank" rel="noopener">sftrucking406.com</a></div>
+      </article>
+
+      <article class="brief">
+        <div class="brief-top"><h3>Tavas App</h3></div>
+        <div class="chips"><span class="chip status">Live on web &amp; Android</span><span class="chip status">iOS in progress</span></div>
+        <p>A wellness tracking app I took from concept to Google Play, then iterated through 80+ releases with error monitoring, subscriptions, and device testing.</p>
+        <p class="meta">React · TypeScript · Capacitor · Supabase · Sentry</p>
+        <div class="links"><a href="https://tavas.app" target="_blank" rel="noopener">tavas.app</a></div>
+      </article>
+
+      <article class="brief">
+        <div class="brief-top"><h3>Tavas Compass</h3></div>
+        <div class="chips"><span class="chip status">Live</span><span class="chip">Career intelligence platform</span></div>
+        <p>A career assessment platform with my own scoring framework, account sign-in, paid reports through Stripe, and automated email delivery.</p>
+        <p class="meta">React · TypeScript · Cloudflare · Supabase · Stripe</p>
+        <div class="links"><a href="https://tavascompass.com" target="_blank" rel="noopener">tavascompass.com</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <div class="sec-head"><h2 id="skills">Skills &amp; systems</h2></div>
+    <div class="skills">
+      <div><p class="label">Operations</p><p>Program and project management, process improvement, compliance documentation, KPI reporting, vendor coordination</p></div>
+      <div><p class="label">Finance &amp; HR</p><p>AP/AR, payroll, Medicaid and insurance billing, onboarding, benefits administration</p></div>
+      <div><p class="label">Healthcare</p><p>CPT and ICD coding, EHR documentation, revenue cycle; Epic, Cerner, PointClickCare, Meditech, athena, eClinicalWorks</p></div>
+      <div><p class="label">Tools</p><p>ADP, QuickBooks, Sage 100, Salesforce, HubSpot, Asana, ClickUp, Microsoft 365, Google Workspace, GitHub</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="creds">
+    <div class="sec-head"><h2 id="creds">Education &amp; certificates</h2></div>
+    <ul class="creds">
+      <li>Bachelor of Arts, concentration in Digital Audiences &amp; New Media <span>Southern New Hampshire University · 2025</span></li>
+      <li>Associate of Applied Science, Computer Information Systems <span>Kaplan University · 2006</span></li>
+      <li>Agile Project Management Professional Certificate <span>Google · 2023</span></li>
+      <li>Human Resource Management <span>University of Minnesota · 2023</span></li>
+      <li>Digital Marketing &amp; E-commerce Professional Certificate <span>Google · 2023</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Sara C. Morell · Open to remote roles</span>
+    <a href="https://www.linkedin.com/in/sara-c-morell-94895391" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </footer>
+</div>
+
+<script>
+document.getElementById('copyEmail').addEventListener('click', function(){
+  var btn=this, text=document.getElementById('email').textContent;
+  function done(msg){btn.textContent=msg;setTimeout(function(){btn.textContent='Copy email'},1800)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected')}
+  try{navigator.clipboard.writeText(text).then(function(){done('Copied')},fallback)}catch(e){fallback()}
+});
+</script>
+
 </body>
 </html>
